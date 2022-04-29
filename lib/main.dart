@@ -13,11 +13,11 @@ void main() async {
     _prefs.setStringList('MultiPlayer', ['Player 1', 'Player 2', '0', '4']);
   }
   //////////////////////////////////////
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-    ),
+  SystemChrome.setEnabledSystemUIMode(
+    SystemUiMode.manual,
+    overlays: [],
   );
+  ///////////////////////
   runApp(const MyApp());
 }
 
